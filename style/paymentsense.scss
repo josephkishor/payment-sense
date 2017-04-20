@@ -1,0 +1,269 @@
+@import "mixins.scss";
+
+@media only screen and (min-width : $desktop-min) {
+  body.paymentsense {
+    @include reset ;
+    background: $background-color;
+      div.paymentsense-header {
+          @include flex-container;
+        background: #FFF;
+          height: 45px;
+          align-items: center;
+          justify-content: center;
+          padding: 0 100px 0 100px;
+
+          div.paymentsense-img {
+              flex: 1 1 auto;
+              margin: 10px;
+              img.pssmall {
+                  background-repeat: no-repeat;
+              }
+
+              img.pslarge {
+                  display: none;
+              }
+          }
+
+          div.paymentsense-support {
+            @include flex-container;
+              flex: 1 1 auto;
+              margin: 10px;
+
+              img.psmobile {
+                  display: none;
+              }
+              h2{
+                @include reset;
+                font-size: 16px;
+                color: #2eabe0;
+              }
+          }
+
+          div.paymentsense-sales {
+            @include reset;
+            @include flex-container;
+            margin: 10px;
+            h2{
+              @include reset;
+              font-size: 16px;
+              color: #73b90d;
+
+            }
+          }
+
+          div.paymentsense-quote {
+            @include flex-container;
+            margin: 10px;
+            margin-right: 0;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            background: #73b90d;
+              img.psmobile {
+                  display: none;
+              }
+
+              div.quote{
+              padding: 0 20px 0 15px;
+              h2{
+                @include reset;
+                font-size: 14px;
+                color: #FFF;
+              }
+              }
+
+          }
+      }
+
+      div.paymentsense-body {
+          background: #11213a;
+          height: 500px;
+          div.details{
+            display: none;
+          }
+      }
+  }
+}
+
+@media only screen and (min-width : $tablet-min) and (max-width : $tablet-max) {
+    body.paymentsense {
+      //height: 1050px;
+      background: $background-color;
+      @include reset ;
+        div.paymentsense-header {
+            @include flex-container;
+            background: #FFF;
+            height: 90px;
+            align-items: center;
+            justify-content: center;
+
+            div.paymentsense-img {
+                flex: 1 1 auto;
+                margin: 10px;
+                img.pssmall {
+                    display: none;
+                }
+
+                img {
+                    background-repeat: no-repeat;
+                }
+            }
+
+            div.paymentsense-support {
+                flex: 1 1 auto;
+                margin: 10px;
+
+                img.psmobile {
+                    display: none;
+                }
+                h2{
+                  @include reset;
+                  font-size: 20px;
+                  color: #2eabe0;
+                }
+            }
+
+            div.paymentsense-sales {
+
+              @include reset;
+              margin: 10px;
+              h2{
+                @include reset;
+                font-size: 20px;
+                color: #73b90d;
+
+              }
+            }
+
+            div.paymentsense-quote {
+              @include flex-container;
+              margin: 10px;
+              margin-right: 0;
+              align-items: center;
+              justify-content: center;
+              height: 90px;
+              background: #73b90d;
+                img.psmobile {
+                    display: none;
+                }
+
+                div.quote{
+                margin: 0 15px 0 15px;
+                h2{
+                  @include reset;
+                  font-size: 20px;
+                  color: #FFF;
+                }
+                }
+
+            }
+        }
+
+        div.paymentsense-header-scroll{
+          display: none;
+        }
+
+        div.paymentsense-body {
+            background: #11213a;
+            height: 500px;
+            div.details{
+              display: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $mobile-max) {
+    body.paymentsense {
+      background: $background-color;
+        div.paymentsense-header {
+            @include flex-container;
+            background: #FFF;
+            padding: 0 20px 0 20px;
+            height: 55px;
+            align-items: center;
+            justify-content: center;
+
+            div.paymentsense-img {
+                flex: 1 1 auto;
+                img.pslarge {
+                    display: none;
+                }
+
+                img {
+                    background-repeat: no-repeat;
+                }
+            }
+
+            div.paymentsense-support {
+                flex: 1 1 auto;
+
+                img {
+                    background-repeat: no-repeat;
+                    width: 45px;
+                    margin-right: 40px;
+                }
+                h2{
+                  display: none;
+                }
+            }
+
+            div.paymentsense-sales{
+              display: none;
+            }
+
+            div.paymentsense-quote {
+              width: 65px;
+                img {
+                    background-repeat: no-repeat;
+                }
+                div.quote{
+                  display: none;
+
+                }
+            }
+        }
+
+        div.paymentsense-body {
+          div.details{
+            background: #031d47;
+            height: 560px; // not necessary. set it only because no content to put.
+            @include reset;
+            display: flex;
+            flex-flow: column;
+            -webkit-flex: flex;
+            -webkit-flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            img{
+              background-repeat: no-repeat;
+              width: 45px;
+            }
+            h3{
+              color: #73b90d;
+            }
+            h3.cn{
+              color: #FFF;
+            }
+            img.phone2{
+              background-repeat: no-repeat;
+              width: 125px;
+            }
+            h3.cs{
+              color: #FFF;
+            }
+            input[type="button"]{
+              width: 200px;
+              background: $button-color;
+              color: #FFF;
+              height: 55px;
+              font-weight: 700;
+              border-radius: 10px;
+            }
+          }
+        }
+        div.paymentsense-footer {
+
+        }
+    }
+}

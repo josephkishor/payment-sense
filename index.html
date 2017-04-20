@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paymentsense</title>
+    <link rel="stylesheet" type="text/css" href="./style/paymentsense.min.css">
+    <meta content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" type="application/javascript"></script>
+    <script type="application/javascript">
+        $(document).ready(function(){
+
+            $(window ).scroll(function() {
+                //var viewport = $(window).width();
+                    if($(window).width() > 751 && $(window).width() <1024){
+                        console.log('SCROLL LIMIT EXCEEDED',$("body").scrollTop());
+                        if($("body").scrollTop() > 10 ){
+                            console.log('SCROLL LIMIT EXCEEDED',$("body").scrollTop());
+                            $( ".paymentsense-header" ).addClass( "paysense-t-scroll" );
+                            $( ".paymentsense-header" ).addClass( "paysense-margin" );
+                            $( "div.paymentsense-quote" ).addClass( "paysense-t-scroll" );
+
+                        }
+                        if($("body").scrollTop() == 0 ){
+                            console.log('SCROLL LIMIT Zeeo',$("body").scrollTop());
+                            $( ".paymentsense-header" ).removeClass( "paysense-t-scroll" );
+                            $( ".paymentsense-header" ).removeClass( "paysense-margin" );
+                            $( ".paymentsense-quote" ).removeClass( "paysense-t-scroll" );
+                        }
+                    }
+                    if($(window).width() >=1024){
+                        if($("body").scrollTop() > 10 ){
+                            console.log('SCROLL LIMIT EXCEEDED',$("body").scrollTop());
+                            $( ".paymentsense-header" ).addClass( "paysense-d-scroll" );
+                            $( ".paymentsense-header" ).addClass( "paysense-margin" );
+                            $( "div.paymentsense-quote" ).addClass( "paysense-d-scroll" );
+
+                        }
+                        if($("body").scrollTop() == 0 ){
+                            console.log('SCROLL LIMIT Zeeo',$("body").scrollTop());
+                            $( ".paymentsense-header" ).removeClass( "paysense-d-scroll" );
+                            $( ".paymentsense-header" ).removeClass( "paysense-margin" );
+                            $( ".paymentsense-quote" ).removeClass( "paysense-d-scroll" );
+                        }
+                    }
+            });
+       });
+    </script>
+    <style>
+
+        .paysense-t-scroll{
+            height: 60px !important;
+        }
+
+        .paysense-margin{
+            margin-top: 20px;
+        }
+
+        .paysense-d-scroll{
+            height: 50px !important;
+        }
+
+        #paymentsense{
+            height: 1050px;
+        }
+
+    </style>
+</head>
+
+<body id="paymentsense" class="paymentsense">
+
+    <div class="paymentsense-header">
+
+            <div class="paymentsense-img">
+                <img src="./assets/PSSmall.png" class="psmobile pssmall">
+                <img src="./assets/PSLarge.png" class="psmobile pslarge">
+            </div>
+
+        <div class="paymentsense-support">
+            <img src="./assets/phonei.png" class="psmobile">
+            <h2>SUPPORT:</h2>
+            <h2>0800 3456 8888</h2>
+        </div>
+
+        <div class="paymentsense-sales">
+            <h2>SALES:</h2>
+            <h2>0800 3456 8888</h2>
+        </div>
+
+        <div class="paymentsense-quote">
+            <img src="./assets/menu.png" class="psmobile">
+            <div class="quote">
+                <h2>GET A FREE QUOTE</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="paymentsense-body" id="paymentsense-body">
+            <div class="details">
+                <img src="./assets/phonei.png" class="psmobile">
+                <h3>Contact Details</h3>
+                <h3 class="cn">0800 078 3287</h3>
+                <img src="./assets/phone2.png" class="phone2">
+                <h3 class="">Customer Support</h3>
+                <h3 class="cn">0800 078 3287</h3>
+                <input type="button" value="GET YOUR FREE QUOTE">
+            </div>
+
+    </div>
+    <div id="paymentsense-footer" class="paymentsense-footer"></div>
+
+</body>
+
+</html>
+
+
+
